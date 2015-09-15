@@ -1,0 +1,9 @@
+
+Text: 
+
+###du wohnst in Köln?
+
+Ein freundlicher Gastgeber aus Köln freut sich darauf, sich zum Essen einzuladen.
+
+
+(link: contact/host text: als Gastgeber anmelden class: link__cta)

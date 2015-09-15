@@ -1,0 +1,9 @@
+
+Text: 
+
+###du bist Flüchtling?
+
+Ein freundlicher Gastgeber aus Köln freut sich darauf, sich zum Essen einzuladen.
+
+(link: contact/guest text: als gast anmelden class: link__cta)
+
