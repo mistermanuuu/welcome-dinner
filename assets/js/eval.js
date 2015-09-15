@@ -74,6 +74,10 @@
      * @param callback - Function - The callback after validation has been performed.
      *     @argument errors - An array of validation errors
      *     @argument event - The javascript event
+     *
+     *
+     *
+     *
      */
 
     var FormValidator = function(formNameOrNode, fields, callback) {
