@@ -28,3 +28,34 @@ make Kirby work. For more fine-grained configuration
 of the system, please check out http://getkirby.com/docs/advanced/options
 
 */
+
+c::set('languages', array(
+//    array(
+//        'code'    => 'en',
+//        'name'    => 'English',
+//        'default' => true,
+//        'url'     => '/',
+//        'locale'  => array(
+//            LC_COLLATE  => 'en_US.utf8',
+//            LC_MONETARY => 'en_US.utf8',
+//            LC_NUMERIC  => 'en_US.utf8',
+//            LC_TIME     => 'en_US.utf8',
+//            LC_MESSAGES => 'en_US.utf8',
+//            LC_CTYPE    => 'en_US.utf8'
+//        ),
+//    ),
+    array(
+        'code'    => 'de',
+        'name'    => 'Deutsch',
+        'default' => true,
+        'url'     => '/de',
+        'locale'  => array(
+            LC_COLLATE  => 'de_DE.utf8',
+            LC_MONETARY => 'de_DE.utf8',
+            LC_NUMERIC  => 'de_DE.utf8',
+            LC_TIME     => 'de_DE.utf8',
+            LC_MESSAGES => 'de_DE.utf8',
+            LC_CTYPE    => 'de_DE.utf8'
+        ),
+    ),
+));

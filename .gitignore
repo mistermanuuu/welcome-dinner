@@ -1,2 +1,8 @@
-kirby\*
-panel\*
+.idea/*
+kirby/*
+panel/*
+site/accounts/*
+.htaccess
+.htpasswd
+.*
+license.md

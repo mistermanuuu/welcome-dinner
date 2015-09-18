@@ -4,9 +4,8 @@ Title: Willkommen in Köln
 
 Text: 
 
-####Lasst uns zusammen Essen!
+####Wir vermitteln Gäste aus aller Welt an Gastgeber aus Köln.
 <br/>Das Welcome Dinner Köln ist eine Plattform zur Anbahnung von Begegnungen.
 Wir wollen Flüchtlingen einen Zugang zur Gesellschaft geben und Gastgebern die Möglichkeit sie bei einem Abendessen kennenzulernen.
 
 (image: futtern.png class: img-centered)
-

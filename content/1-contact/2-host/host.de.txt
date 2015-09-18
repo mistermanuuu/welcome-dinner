@@ -1,10 +1,10 @@
-Title: als Gast
+Title: als Gastgeber
 
 ----
 
 Text: 
 
-###als gast anmelden
+###als Gastgeber anmelden
 
 Bitte fülle das Formular aus.
 Du kannst das Formular auch zum Ausdrucken herunterladen ((Download-Link)).

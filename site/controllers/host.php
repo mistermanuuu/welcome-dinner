@@ -9,17 +9,36 @@
  *
  */
 
+
 return function($site, $pages, $page) {
 
 	$alert = null;
+	$date = new DateTime();
+	$timeStamp = $date->getTimestamp();
+	$timeString = date('Ymd',$timeStamp);
+	$bookingDate = date('Y-m-d H:i:s',$timeStamp);
 
 	if(get('submit')) {
+		$Iam = get('whoAmI');
 
 		$data = array(
-			'name'  => get('name'),
-			'email' => get('email'),
-			'text'  => get('text')
+			'date' => $bookingDate
+		, 'gender' => get('gender')
+		, 'name' => get('name')
+		, 'street' => get('street')
+		, 'place' => get('place')
+		, 'email' => get('email')
+		, 'phone' => get('phone')
+		, 'language' => get('language')
+		, 'date-1' => get('date-1')
+		, 'date-2' => get('date-2')
+		, 'date-3' => get('date-3')
+		, 'kids' => get('kids')
+		, 'friends' => get('friends')
+		, 'text' => get('text')
 		);
+
+		error_log(print_r($data,1));
 
 		$rules = array(
 			'name'  => array('required'),
@@ -45,17 +64,22 @@ return function($site, $pages, $page) {
 
 			// build the email
 			$email = email(array(
-				'to'      => 'bastian@getkirby.com',
-				'from'    => 'contactform@getkirby.com',
+				'to'      => 'marcel.zauche@denkwerk.com',
+				'from'    => 'contactform@welcome-dinner.com',
 				'subject' => 'New contact request',
 				'replyTo' => $data['email'],
 				'body'    => $body
 			));
 
+			$file = fopen($_SERVER['DOCUMENT_ROOT'].'/site/contact_data/' . $Iam . '/' . $timeString, 'a' );
+			fputcsv($file, $data);
+			fclose($file);
+
 			// try to send it and redirect to the
 			// thank you page if it worked
 			if($email->send()) {
-				go('contact/thank-you');
+
+				go('contact/thank-you/');
 				// add the error to the alert list if it failed
 			} else {
 				$alert = array($email->error());
@@ -68,3 +92,4 @@ return function($site, $pages, $page) {
 	return compact('alert');
 
 };
+

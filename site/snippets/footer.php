@@ -12,7 +12,7 @@
 
 
 <script>
-	var validator = new FormValidator('form-guest', [{
+	var validator = new FormValidator('jsValidateForm', [{
 		name: 'req',
 		display: 'required',
 		rules: 'required'
@@ -37,8 +37,17 @@
 		display: 'min length',
 		rules: 'min_length[8]'
 	}], function(errors, event) {
+
 		if (errors.length > 0) {
 			// Show the errors
+			var errorString = '';
+
+			for (var i = 0, errorLength = errors.length; i < errorLength; i++) {
+				errorString += errors[i].message + '<br />';
+			}
+
+			el.innerHTML = errorString;
+
 		}
 	});
 </script>
